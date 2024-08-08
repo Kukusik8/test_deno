@@ -5,7 +5,7 @@ const Timestamp = function (precision = 6) {
     if (!Number.isInteger(precision)) precision = 6;
     const p = precision;
 
-    const start = typeof performance.timeOrigin !== 'undefined' ? performance.timeOrigin : Date.now();
+    const start =  performance.timeOrigin 
     const now = performance.now();
 
     const iso = new Date(start + now).toISOString();
