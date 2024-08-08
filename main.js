@@ -1,8 +1,4 @@
-
-/* -------------------------------------------------------------------------
- * Shim.Timestamp
- * ------------------------------------------------------------------------- */
-
+import { serve } from "https://deno.land/std@0.141.0/http/server.ts";
 
 const Timestamp = function (precision = 6) {
 
@@ -20,6 +16,5 @@ const Timestamp = function (precision = 6) {
 };
 
 
-console.log(Timestamp(6));
-console.log(Timestamp(4));
-console.log(Timestamp(3));
+
+serve(Timestamp(6))
